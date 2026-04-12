@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# PRJCTR Workshop starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite project for building interactive visuals in the browser.
 
-Currently, two official plugins are available:
+## Get it running
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+You only need **Node.js** (it includes **npm**, which installs dependencies and runs the app). Download the **LTS** version from [nodejs.org](https://nodejs.org/).
 
-## React Compiler
+Open a **terminal** and check that Node and npm are available:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+node -v
+npm -v
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+If those commands fail, install Node.js LTS and try again.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**1. Put the project on your machine**
+
+Use **Git** to clone the repository into whatever folder you use for projects (for example `Documents` or `Code`):
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
 ```
+
+Use the **HTTPS** URL from your repo’s green **Code** button on GitHub. After `cd`, you should be inside the folder that contains `package.json`.
+
+If you are starting from the **GitHub template**, create your own repository first: open the template (for example [github.com/itstimefortea/prjctr-workshop](https://github.com/itstimefortea/prjctr-workshop)), click **Use this template** → **Create a new repository**, then clone **your** new repo with the commands above.
+
+---
+
+**2. Install dependencies**
+
+Still in the project folder:
+
+```bash
+npm install
+```
+
+---
+
+**3. Run the app**
+
+```bash
+npm run dev
+```
+
+Open **http://localhost:5173/** in your browser. The page updates when you save code changes. To stop the server, press **Ctrl+C** in the terminal.
+
+---
+
+## Advanced
+
+**No Git — download as ZIP**  
+On GitHub: **Code** → **Download ZIP**. Unzip it, then in a terminal run `cd` into that folder (on Windows you can type `cd ` and drag the folder into the terminal). Continue with `npm install` and `npm run dev`.
+
+**Other npm scripts** (same folder as `package.json`)
+
+| Command | Purpose |
+|--------|---------|
+| `npm run build` | Production build into `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+**Install Git** (if `git clone` is not found): [git-scm.com](https://git-scm.com/)
+
+**Troubleshooting**
+
+- **`npm` not found** — Install Node.js LTS and restart the terminal.
+- **Errors after pulling changes** — From the project folder: delete `node_modules`, run `npm install` again.
+- **Port in use** — Something else may be using port `5173`; stop that process or [change Vite’s port](https://vite.dev/config/server-options.html).
+- **Commands do nothing** — Run `npm install` / `npm run dev` from the directory that contains `package.json`.
+
+**Project layout and stack (Tailwind, Base UI, Three.js, etc.)** — see **[AGENTS.md](./AGENTS.md)**.
+
+**Docs:** [Vite](https://vite.dev/) · [React](https://react.dev/) · [Tailwind CSS](https://tailwindcss.com/) · [Base UI](https://base-ui.com/) · [React Three Fiber](https://r3f.docs.pmnd.rs/)
