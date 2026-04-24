@@ -2,53 +2,102 @@
 
 A React + Vite project for building interactive visuals in the browser.
 
-## Get it running
+## First-time setup (beginner friendly)
 
-You only need **Node.js** (it includes **npm**, which installs dependencies and runs the app). Download the **LTS** version from [nodejs.org](https://nodejs.org/).
+This section walks through everything from **opening the GitHub template** to running the project on your machine.
 
-Open a **terminal** and check that Node and npm are available:
+### Before you start
+
+You need:
+
+- **Node.js (LTS)** from [nodejs.org](https://nodejs.org/)  
+  (Node includes **npm**, which this project uses)
+- **Git** from [git-scm.com](https://git-scm.com/) (recommended)
+- A **GitHub account**
+
+After installing Node, open a terminal and run:
 
 ```bash
 node -v
 npm -v
 ```
 
-If those commands fail, install Node.js LTS and try again.
+If both commands print version numbers, you are ready.
 
 ---
 
-**1. Put the project on your machine**
+### Step 1: Create your own repo from the template
 
-Use **Git** to clone the repository into whatever folder you use for projects (for example `Documents` or `Code`):
+1. Open the template repo: [github.com/itstimefortea/prjctr-workshop](https://github.com/itstimefortea/prjctr-workshop)
+2. Click **Use this template**.
+3. Click **Create a new repository**.
+4. Choose:
+   - your account/organization
+   - a repo name (example: `my-prjctr-workshop`)
+   - visibility (public or private)
+5. Click **Create repository**.
+
+You now have your own copy on GitHub.
+
+---
+
+### Step 2: Download your repo to your computer (clone)
+
+1. In **your new repo** on GitHub, click the green **Code** button.
+2. Make sure **HTTPS** is selected.
+3. Copy the URL.
+4. Open Terminal and run:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone YOUR_COPIED_URL_HERE
 ```
 
-Use the **HTTPS** URL from your repo’s green **Code** button on GitHub. After `cd`, you should be inside the folder that contains `package.json`.
+Example:
 
-If you are starting from the **GitHub template**, create your own repository first: open the template (for example [github.com/itstimefortea/prjctr-workshop](https://github.com/itstimefortea/prjctr-workshop)), click **Use this template** → **Create a new repository**, then clone **your** new repo with the commands above.
+```bash
+git clone https://github.com/YOUR_USERNAME/my-prjctr-workshop.git
+```
+
+5. Move into the project folder:
+
+```bash
+cd my-prjctr-workshop
+```
+
+Tip: run `ls` (Mac/Linux) and make sure you can see `package.json` in this folder.
 
 ---
 
-**2. Install dependencies**
+### Step 3: Install project dependencies
 
-Still in the project folder:
+Still in the project folder, run:
 
 ```bash
 npm install
 ```
 
+This may take a minute the first time.
+
 ---
 
-**3. Run the app**
+### Step 4: Start the local development server
+
+Run:
 
 ```bash
 npm run dev
 ```
 
-Open **http://localhost:5173/** in your browser. The page updates when you save code changes. To stop the server, press **Ctrl+C** in the terminal.
+You should see a local URL like:
+
+```text
+http://localhost:5173/
+```
+
+Open that URL in your browser.
+
+- Leave the terminal running while you work.
+- Stop the server any time with **Ctrl+C**.
 
 ---
 
@@ -65,11 +114,10 @@ On GitHub: **Code** → **Download ZIP**. Unzip it, then in a terminal run `cd` 
 | `npm run preview` | Preview the production build locally |
 | `npm run lint` | Run ESLint |
 
-**Install Git** (if `git clone` is not found): [git-scm.com](https://git-scm.com/)
-
 **Troubleshooting**
 
 - **`npm` not found** — Install Node.js LTS and restart the terminal.
+- **`git` not found** — Install Git from [git-scm.com](https://git-scm.com/) and restart the terminal.
 - **Errors after pulling changes** — From the project folder: delete `node_modules`, run `npm install` again.
 - **Port in use** — Something else may be using port `5173`; stop that process or [change Vite’s port](https://vite.dev/config/server-options.html).
 - **Commands do nothing** — Run `npm install` / `npm run dev` from the directory that contains `package.json`.
