@@ -11,8 +11,7 @@ This section walks through everything from **opening the GitHub template** to ru
 You need:
 
 - **Node.js (LTS)** from [nodejs.org](https://nodejs.org/)  
-  (Node includes **npm**, which this project uses)
-- **Git** from [git-scm.com](https://git-scm.com/) (recommended)
+(Node includes **npm**, which this project uses)
 - A **GitHub account**
 
 After installing Node, open a terminal and run:
@@ -26,18 +25,20 @@ If both commands print version numbers, you are ready.
 
 ---
 
-### Step 1: Create your own repo from the template
+### Step 1: Create your own repo from the template [OPTIONAL]
 
 1. Open the template repo: [github.com/itstimefortea/prjctr-workshop](https://github.com/itstimefortea/prjctr-workshop)
 2. Click **Use this template**.
 3. Click **Create a new repository**.
 4. Choose:
-   - your account/organization
-   - a repo name (example: `my-prjctr-workshop`)
-   - visibility (public or private)
+  - your account/organization
+  - a repo name (example: `my-prjctr-workshop`)
+  - visibility (public or private)
 5. Click **Create repository**.
 
-You now have your own copy on GitHub.
+You now have your own copy on GitHub.  
+  
+Note: You can also just skip to step 2 if you don't want to worry about Github for now.
 
 ---
 
@@ -58,7 +59,7 @@ Example:
 git clone https://github.com/YOUR_USERNAME/my-prjctr-workshop.git
 ```
 
-5. Move into the project folder:
+1. Move into the project folder:
 
 ```bash
 cd my-prjctr-workshop
@@ -104,20 +105,22 @@ Open that URL in your browser.
 ## Advanced
 
 **No Git — download as ZIP**  
-On GitHub: **Code** → **Download ZIP**. Unzip it, then in a terminal run `cd` into that folder (on Windows you can type `cd ` and drag the folder into the terminal). Continue with `npm install` and `npm run dev`.
+On GitHub: **Code** → **Download ZIP**. Unzip it, then in a terminal run `cd` into that folder (on Windows you can type `cd`  and drag the folder into the terminal). Continue with `npm install` and `npm run dev`.
 
 **Other npm scripts** (same folder as `package.json`)
 
-| Command | Purpose |
-|--------|---------|
-| `npm run build` | Production build into `dist/` |
+
+| Command           | Purpose                              |
+| ----------------- | ------------------------------------ |
+| `npm run build`   | Production build into `dist/`        |
 | `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint |
+| `npm run lint`    | Run ESLint                           |
+
 
 **Troubleshooting**
 
-- **`npm` not found** — Install Node.js LTS and restart the terminal.
-- **`git` not found** — Install Git from [git-scm.com](https://git-scm.com/) and restart the terminal.
+- `**npm` not found** — Install Node.js LTS and restart the terminal.
+- `**git` not found** — Install Git from [git-scm.com](https://git-scm.com/) and restart the terminal.
 - **Errors after pulling changes** — From the project folder: delete `node_modules`, run `npm install` again.
 - **Port in use** — Something else may be using port `5173`; stop that process or [change Vite’s port](https://vite.dev/config/server-options.html).
 - **Commands do nothing** — Run `npm install` / `npm run dev` from the directory that contains `package.json`.
