@@ -27,10 +27,7 @@ If both commands print version numbers, you are ready.
 
 ### Step 1: Download your repo to your computer (clone)
 
-1. On GitHub, click the green **Code** button.
-2. Make sure **HTTPS** is selected.
-3. Copy the URL.
-4. Open Terminal and run:
+1. Open Terminal and run:
 
 ```bash
 git clone https://github.com/itstimefortea/prjctr-workshop.git
