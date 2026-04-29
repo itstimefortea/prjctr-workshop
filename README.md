@@ -25,26 +25,9 @@ If both commands print version numbers, you are ready.
 
 ---
 
-### Step 1: Create your own repo from the template [OPTIONAL]
+### Step 1: Download your repo to your computer (clone)
 
-1. Open the template repo: [github.com/itstimefortea/prjctr-workshop](https://github.com/itstimefortea/prjctr-workshop)
-2. Click **Use this template**.
-3. Click **Create a new repository**.
-4. Choose:
-  - your account/organization
-  - a repo name (example: `my-prjctr-workshop`)
-  - visibility (public or private)
-5. Click **Create repository**.
-
-You now have your own copy on GitHub.  
-  
-Note: You can also just skip to step 2 if you don't want to worry about Github for now.
-
----
-
-### Step 2: Download your repo to your computer (clone)
-
-1. In **your new repo** on GitHub, click the green **Code** button.
+1. On GitHub, click the green **Code** button.
 2. Make sure **HTTPS** is selected.
 3. Copy the URL.
 4. Open Terminal and run:
@@ -69,7 +52,7 @@ Tip: run `ls` (Mac/Linux) and make sure you can see `package.json` in this folde
 
 ---
 
-### Step 3: Install project dependencies
+### Step 2: Install project dependencies
 
 Still in the project folder, run:
 
@@ -81,7 +64,7 @@ This may take a minute the first time.
 
 ---
 
-### Step 4: Start the local development server
+### Step 3: Start the local development server
 
 Run:
 
