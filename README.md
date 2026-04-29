@@ -33,13 +33,7 @@ If both commands print version numbers, you are ready.
 4. Open Terminal and run:
 
 ```bash
-git clone YOUR_COPIED_URL_HERE
-```
-
-Example:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/my-prjctr-workshop.git
+git clone https://github.com/itstimefortea/prjctr-workshop.git
 ```
 
 1. Move into the project folder:
