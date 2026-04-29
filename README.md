@@ -27,13 +27,13 @@ If both commands print version numbers, you are ready.
 
 ### Step 1: Download your repo to your computer (clone)
 
-1. Open Terminal and run:
+Open Terminal and run:
 
 ```bash
 git clone https://github.com/itstimefortea/prjctr-workshop.git
 ```
 
-1. Move into the project folder:
+Move into the project folder:
 
 ```bash
 cd my-prjctr-workshop
